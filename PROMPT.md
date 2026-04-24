@@ -103,7 +103,7 @@ Include **six distinct GSAP animation moments**, each commented in the code with
 │                                                      │
 │  ═══════════════════════════════════════════        │
 │  [ Type your message here......  ][ Send ]           │
-│  Made by NAME · Atlantis University                  │
+│  Created by Alex Pasquini                            │
 └─────────────────────────────────────────────────────┘
 ```
 
