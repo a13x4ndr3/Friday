@@ -15,6 +15,22 @@
     rel="stylesheet"
   />
 
+</head>> JavaScript
+
+  const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+  recognition.lang = 'en-US';
+  recognition.continuous = false;
+
+  function startListening() {
+  recognition.start();
+  }
+
+  recognition.onresult = (event) => {
+  const transcript = event.results[0][0].transcript;
+  inputEl.value = transcript;
+  send();
+  };
+
   <!-- GSAP for animations (no build step — just a CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
@@ -514,6 +530,7 @@
           rows="1"
           onkeydown="handleKey(event)"
           oninput="autoGrow(this)"
+          <button onclick="startListening()">🎤</button>
         ></textarea>
         <button class="send-btn" id="sendBtn" onclick="send()">Send</button>
       </div>
